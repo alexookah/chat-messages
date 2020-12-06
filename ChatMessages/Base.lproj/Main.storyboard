@@ -51,11 +51,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="number" keyPath="selectedIndex">
-                                <integer key="value" value="4"/>
-                            </userDefinedRuntimeAttribute>
-                        </userDefinedRuntimeAttributes>
+                        <color key="tintColor" name="DarkGrey"/>
                     </tabBar>
                     <connections>
                         <segue destination="AZr-dT-sgg" kind="relationship" relationship="viewControllers" id="qpH-xv-FVb"/>
@@ -230,6 +226,7 @@
                                                         <constraint firstAttribute="width" secondItem="4xa-ol-VDc" secondAttribute="height" multiplier="1:1" id="c9X-N0-FrF"/>
                                                         <constraint firstAttribute="height" constant="50" id="y55-WG-Rsr"/>
                                                     </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <state key="normal" title="S"/>
                                                     <userDefinedRuntimeAttributes>
@@ -288,7 +285,7 @@
                                                 <constraint firstItem="4xa-ol-VDc" firstAttribute="leading" secondItem="QXE-uv-87i" secondAttribute="trailing" constant="8" id="iCI-UH-Zfo"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="ggF-Ov-4Xw" secondAttribute="trailing" id="jcq-u6-KMf"/>
                                                 <constraint firstItem="QXE-uv-87i" firstAttribute="leading" secondItem="c2r-Gr-I2d" secondAttribute="leadingMargin" constant="8" id="mWL-RB-0xz"/>
-                                                <constraint firstItem="ggF-Ov-4Xw" firstAttribute="leading" secondItem="hxD-6t-IKq" secondAttribute="trailing" constant="12" id="qdD-Dw-6CO"/>
+                                                <constraint firstItem="ggF-Ov-4Xw" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="hxD-6t-IKq" secondAttribute="trailing" constant="12" id="qdD-Dw-6CO"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -323,12 +320,6 @@
                             <constraint firstItem="htE-B6-nqp" firstAttribute="top" secondItem="v0i-P4-pfG" secondAttribute="bottom" id="zDn-EN-fFl"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="color" keyPath="topColor">
-                                <color key="value" name="BackgroundTop"/>
-                            </userDefinedRuntimeAttribute>
-                            <userDefinedRuntimeAttribute type="color" keyPath="bottomColor">
-                                <color key="value" name="BackgroundBottom"/>
-                            </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="color" keyPath="gradientTopColor">
                                 <color key="value" name="BackgroundBottom"/>
                             </userDefinedRuntimeAttribute>
@@ -381,13 +372,13 @@
     </scenes>
     <designables>
         <designable name="4xa-ol-VDc">
-            <size key="intrinsicContentSize" width="30" height="30"/>
+            <size key="intrinsicContentSize" width="30" height="33"/>
         </designable>
         <designable name="Rwf-kc-xqk">
             <size key="intrinsicContentSize" width="28" height="28"/>
         </designable>
     </designables>
-    <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+    <color key="tintColor" name="DarkGrey"/>
     <resources>
         <image name="add" width="28" height="28"/>
         <image name="attachment" width="16" height="16"/>

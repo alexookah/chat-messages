@@ -30,8 +30,25 @@ class MessagesPreviewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
-//    func config(with message: Message) {
-//
-//    }
+    func config(with message: Message) {
+
+        messageStatusView.isHidden = !message.isUnread
+        senderNameButton.setTitle(message.senderNameInitials, for: .normal)
+        messageSubject.text = message.subject
+        messageContent.text = message.content
+
+        messageTime.text = message.time
+        messageAttachment.isHidden = !message.containsAttachment
+
+        senderFullName.text = message.senderName
+
+        if message.isUnread {
+            senderFullName.textColor = .black
+            messageSubject.textColor = .black
+        } else {
+            senderFullName.textColor = .appColor(.darkGrey)
+            messageSubject.textColor = .appColor(.darkGrey)
+        }
+    }
 
 }

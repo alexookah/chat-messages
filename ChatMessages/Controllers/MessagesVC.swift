@@ -11,6 +11,8 @@ class MessagesVC: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
 
+    let messagesViewModel = MessagesViewModel()
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -24,7 +26,8 @@ class MessagesVC: UIViewController {
 extension MessagesVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         guard let headerView = MessagesSectionView.instanceFromNib() else { return nil }
-        headerView.title.text = "Read receipts"
+
+        headerView.title.text = messagesViewModel.sections[section].titleShown
 
         return headerView
     }
@@ -39,15 +42,11 @@ extension MessagesVC: UITableViewDataSource {
     }
 
     func numberOfSections(in tableView: UITableView) -> Int {
-        2
+        return messagesViewModel.sections.count
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if section == 0 {
-            return 1
-        } else {
-            return 4
-        }
+        return messagesViewModel.sections[section].messages.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -55,20 +54,19 @@ extension MessagesVC: UITableViewDataSource {
                                                             for: indexPath) as? MessagesPreviewCell
         else { return UITableViewCell()}
 
+        let message = messagesViewModel.sections[indexPath.section].messages[indexPath.row]
+
+        cell.config(with: message)
+
         return cell
     }
 
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
 
-        if indexPath.row == 0 {
-            cell.dropShadow(color: UIColor.appColor(.darkerGrey) ?? .black, opacity: 0.35,
-                            offSet: CGSize(width: -1, height: 6), radius: 6, scale: false)
-
-            // first row
-        } else if indexPath.row == tableView.numberOfRows(inSection: indexPath.section) - 1 {
+        if indexPath.row == tableView.numberOfRows(inSection: indexPath.section) - 1 {
             // last row
             cell.dropShadow(color: UIColor.appColor(.darkerGrey) ?? .black, opacity: 0.4,
-                            offSet: CGSize(width: -1, height: 6), radius: 7, scale: false)
+                            offSet: CGSize(width: -1, height: 6), radius: 7, scale: true)
         }
     }
 
