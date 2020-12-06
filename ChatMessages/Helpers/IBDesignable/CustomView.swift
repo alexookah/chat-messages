@@ -17,6 +17,14 @@ import UIKit
         }
     }
 
+    @IBInspectable var cornerRadius: CGFloat = 0 {
+        didSet {
+            if cornerRadius > 0 {
+                layer.cornerRadius = cornerRadius
+            }
+        }
+    }
+
     @IBInspectable var gradientTopColor: UIColor?
     @IBInspectable var gradientBottomColor: UIColor?
 

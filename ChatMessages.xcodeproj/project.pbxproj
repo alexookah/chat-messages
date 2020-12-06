@@ -10,6 +10,8 @@
 		B4773084257D0D83006251B8 /* MessagesPreviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4773083257D0D83006251B8 /* MessagesPreviewCell.swift */; };
 		B4773088257D0F1E006251B8 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4773087257D0F1E006251B8 /* UIButton.swift */; };
 		B477308D257D1932006251B8 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = B477308C257D1932006251B8 /* Message.swift */; };
+		B48F4CFF257D7437007A47DF /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48F4CFE257D7437007A47DF /* UIColor.swift */; };
+		B48F4D02257D7B3E007A47DF /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48F4D01257D7B3E007A47DF /* UIView.swift */; };
 		B4D80901257CE29400B158AA /* MessagesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D80900257CE29400B158AA /* MessagesVC.swift */; };
 		B4D8090A257CE7EF00B158AA /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D80909257CE7EF00B158AA /* TabBarController.swift */; };
 		B4D80915257CFA7600B158AA /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D80914257CFA7600B158AA /* CustomView.swift */; };
@@ -18,7 +20,6 @@
 		B4E7F39E257B897D009FE7FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4E7F39C257B897D009FE7FC /* Main.storyboard */; };
 		B4E7F3A0257B897E009FE7FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4E7F39F257B897E009FE7FC /* Assets.xcassets */; };
 		B4E7F3A3257B897E009FE7FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4E7F3A1257B897E009FE7FC /* LaunchScreen.storyboard */; };
-		B4E7F3BB257C29EC009FE7FC /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E7F3BA257C29EC009FE7FC /* UIView.swift */; };
 		B4E7F3C0257C2CD3009FE7FC /* MessagesSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E7F3BF257C2CD3009FE7FC /* MessagesSectionView.swift */; };
 		B4E7F3C4257C2CF7009FE7FC /* MessagesSectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4E7F3C3257C2CF7009FE7FC /* MessagesSectionView.xib */; };
 /* End PBXBuildFile section */
@@ -27,6 +28,8 @@
 		B4773083257D0D83006251B8 /* MessagesPreviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesPreviewCell.swift; sourceTree = "<group>"; };
 		B4773087257D0F1E006251B8 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		B477308C257D1932006251B8 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		B48F4CFE257D7437007A47DF /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		B48F4D01257D7B3E007A47DF /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		B4D80900257CE29400B158AA /* MessagesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesVC.swift; sourceTree = "<group>"; };
 		B4D80909257CE7EF00B158AA /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		B4D80914257CFA7600B158AA /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
@@ -37,7 +40,6 @@
 		B4E7F39F257B897E009FE7FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B4E7F3A2257B897E009FE7FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B4E7F3A4257B897E009FE7FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B4E7F3BA257C29EC009FE7FC /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		B4E7F3BF257C2CD3009FE7FC /* MessagesSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesSectionView.swift; sourceTree = "<group>"; };
 		B4E7F3C3257C2CF7009FE7FC /* MessagesSectionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessagesSectionView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -150,7 +152,8 @@
 		B4E7F3B4257C2731009FE7FC /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				B4E7F3BA257C29EC009FE7FC /* UIView.swift */,
+				B48F4CFE257D7437007A47DF /* UIColor.swift */,
+				B48F4D01257D7B3E007A47DF /* UIView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -256,13 +259,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B4E7F3BB257C29EC009FE7FC /* UIView.swift in Sources */,
 				B4D80915257CFA7600B158AA /* CustomView.swift in Sources */,
 				B4E7F3C0257C2CD3009FE7FC /* MessagesSectionView.swift in Sources */,
 				B4E7F397257B897D009FE7FC /* AppDelegate.swift in Sources */,
+				B48F4D02257D7B3E007A47DF /* UIView.swift in Sources */,
 				B4E7F399257B897D009FE7FC /* SceneDelegate.swift in Sources */,
 				B4D8090A257CE7EF00B158AA /* TabBarController.swift in Sources */,
 				B4773084257D0D83006251B8 /* MessagesPreviewCell.swift in Sources */,
+				B48F4CFF257D7437007A47DF /* UIColor.swift in Sources */,
 				B477308D257D1932006251B8 /* Message.swift in Sources */,
 				B4D80901257CE29400B158AA /* MessagesVC.swift in Sources */,
 				B4773088257D0F1E006251B8 /* UIButton.swift in Sources */,

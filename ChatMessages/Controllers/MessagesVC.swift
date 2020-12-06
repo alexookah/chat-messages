@@ -43,7 +43,11 @@ extension MessagesVC: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        if section == 0 {
+            return 1
+        } else {
+            return 4
+        }
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -53,4 +57,19 @@ extension MessagesVC: UITableViewDataSource {
 
         return cell
     }
+
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+
+        if indexPath.row == 0 {
+            cell.dropShadow(color: UIColor.appColor(.darkerGrey) ?? .black, opacity: 0.35,
+                            offSet: CGSize(width: -1, height: 6), radius: 6, scale: false)
+
+            // first row
+        } else if indexPath.row == tableView.numberOfRows(inSection: indexPath.section) - 1 {
+            // last row
+            cell.dropShadow(color: UIColor.appColor(.darkerGrey) ?? .black, opacity: 0.4,
+                            offSet: CGSize(width: -1, height: 6), radius: 7, scale: false)
+        }
+    }
+
 }

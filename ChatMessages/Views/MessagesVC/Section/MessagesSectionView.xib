@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -14,19 +15,19 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JP5-NA-k1c">
-                    <rect key="frame" x="20" y="8" width="386" height="35"/>
-                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <rect key="frame" x="20" y="0.0" width="386" height="51"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                    <color key="textColor" name="Grey"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="kvj-so-ZN3"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="kvj-so-ZN3" firstAttribute="bottom" secondItem="JP5-NA-k1c" secondAttribute="bottom" constant="8" id="RHd-B8-NpY"/>
+                <constraint firstItem="kvj-so-ZN3" firstAttribute="bottom" secondItem="JP5-NA-k1c" secondAttribute="bottom" id="RHd-B8-NpY"/>
                 <constraint firstAttribute="trailing" secondItem="JP5-NA-k1c" secondAttribute="trailing" constant="8" id="cNc-Dq-nrc"/>
                 <constraint firstItem="JP5-NA-k1c" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="e8t-ZX-uLV"/>
-                <constraint firstItem="JP5-NA-k1c" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="zm1-K6-pc7"/>
+                <constraint firstItem="JP5-NA-k1c" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="zm1-K6-pc7"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
@@ -35,4 +36,9 @@
             <point key="canvasLocation" x="105.79710144927537" y="74.665178571428569"/>
         </view>
     </objects>
+    <resources>
+        <namedColor name="Grey">
+            <color red="0.56862745098039214" green="0.61568627450980395" blue="0.65098039215686276" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>

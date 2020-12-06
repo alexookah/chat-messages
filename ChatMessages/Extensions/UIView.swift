@@ -2,25 +2,22 @@
 //  UIView.swift
 //  ChatMessages
 //
-//  Created by Alexandros Lykesas on 5/12/20.
+//  Created by Alexandros Lykesas on 6/12/20.
 //
 
 import UIKit
 
 extension UIView {
 
-    @IBInspectable var borderColor: UIColor? {
-        get { return layer.borderColor.map(UIColor.init) }
-        set { layer.borderColor = newValue?.cgColor }
-    }
+    func dropShadow(color: UIColor, opacity: Float = 0.5, offSet: CGSize, radius: CGFloat = 1, scale: Bool = true) {
+        layer.masksToBounds = false
+        layer.shadowColor = color.cgColor
+        layer.shadowOpacity = opacity
+        layer.shadowOffset = offSet
+        layer.shadowRadius = radius
 
-    @IBInspectable var borderWidth: CGFloat {
-        get { return layer.borderWidth }
-        set { layer.borderWidth = newValue }
-    }
-
-    @IBInspectable var cornerRadius: CGFloat {
-        get { return layer.cornerRadius }
-        set { layer.cornerRadius = newValue }
+        layer.shadowPath = UIBezierPath(rect: self.bounds).cgPath
+        layer.shouldRasterize = true
+        layer.rasterizationScale = scale ? UIScreen.main.scale : 1
     }
 }
