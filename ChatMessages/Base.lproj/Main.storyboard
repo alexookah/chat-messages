@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IUN-Gf-ASp">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -15,7 +14,7 @@
             <objects>
                 <viewController id="AZr-dT-sgg" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="11u-Xa-xcA">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="2Uv-Nu-AiZ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -31,7 +30,7 @@
             <objects>
                 <viewController id="8pU-EQ-Z9q" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Gs3-LC-72n">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="PJ2-Cl-j2n"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -65,12 +64,13 @@
             </objects>
             <point key="canvasLocation" x="-1178" y="537"/>
         </scene>
-        <!--Messages-->
+        <!--Mail Messages-->
         <scene sceneID="EGA-qU-AuZ">
             <objects>
                 <navigationController navigationBarHidden="YES" id="VRs-0t-pvO" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Messages" image="envelope" catalog="system" badgeValue="4" id="aJJ-CV-23S"/>
+                    <tabBarItem key="tabBarItem" title="Mail Messages" image="envelope" catalog="system" badgeValue="4" id="aJJ-CV-23S"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="uiK-N4-cZ4">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -81,25 +81,25 @@
             </objects>
             <point key="canvasLocation" x="-64" y="536"/>
         </scene>
-        <!--Messages-->
+        <!--Mail Messages-->
         <scene sceneID="vs5-bc-ghD">
             <objects>
-                <viewController title="Messages" id="6w0-rt-uZp" customClass="MessagesVC" customModule="ChatMessages" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Mail Messages" id="6w0-rt-uZp" customClass="MessagesVC" customModule="ChatMessages" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BCQ-Su-fkf" customClass="CustomView" customModule="ChatMessages" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jD6-XT-b7r">
-                                <rect key="frame" x="0.0" y="44" width="414" height="70"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="70"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Messages" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xj2-6s-LpX">
-                                        <rect key="frame" x="20" y="17" width="136.5" height="36"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mail Messages" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xj2-6s-LpX">
+                                        <rect key="frame" x="20" y="17" width="198" height="36"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
                                         <color key="textColor" systemColor="systemGrayColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rwf-kc-xqk" customClass="CustomButton" customModule="ChatMessages" customModuleProvider="target">
-                                        <rect key="frame" x="348" y="10" width="50" height="50"/>
+                                        <rect key="frame" x="534" y="10" width="50" height="50"/>
                                         <color key="backgroundColor" name="Orange"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="4UV-mp-zp2"/>
@@ -126,10 +126,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v0i-P4-pfG">
-                                <rect key="frame" x="0.0" y="114" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="70" width="600" height="44"/>
                                 <subviews>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G0A-RR-PDk">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="yS9-X0-pDe">
                                                 <rect key="frame" x="0.0" y="0.0" width="231" height="44"/>
@@ -176,19 +176,19 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="htE-B6-nqp">
-                                <rect key="frame" x="0.0" y="158" width="414" height="655"/>
+                                <rect key="frame" x="0.0" y="114" width="600" height="486"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="separatorInset" minX="50" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MessagesPreviewCell" id="fFw-Cd-8mw" customClass="MessagesPreviewCell" customModule="ChatMessages" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="55.5" width="414" height="104"/>
+                                        <rect key="frame" x="0.0" y="35" width="600" height="104"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fFw-Cd-8mw" id="c2r-Gr-I2d">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="104"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="104"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QXE-uv-87i" customClass="CustomView" customModule="ChatMessages" customModuleProvider="target">
-                                                    <rect key="frame" x="28" y="36.5" width="9" height="9"/>
+                                                    <rect key="frame" x="28" y="36" width="9" height="9"/>
                                                     <color key="backgroundColor" name="Orange"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="9" id="J5v-Qz-i1c"/>
@@ -280,10 +280,10 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MessagesEmptySectionCell" id="K7U-2i-gyN" customClass="MessagesEmptySectionCell" customModule="ChatMessages" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="159.5" width="414" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="78" width="600" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="K7U-2i-gyN" id="tKG-Ra-Rp4">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="There aren't any messages" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uGO-nJ-0Wt">
@@ -334,7 +334,7 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
-                    <navigationItem key="navigationItem" title="Messages" id="FRp-3T-OE5"/>
+                    <navigationItem key="navigationItem" title="Mail Messages" id="FRp-3T-OE5"/>
                     <connections>
                         <outlet property="tableView" destination="htE-B6-nqp" id="uYD-pU-Ym6"/>
                     </connections>
@@ -348,15 +348,15 @@
             <objects>
                 <tableViewController id="J9d-0O-NpT" customClass="ComposeMessageVC" customModule="ChatMessages" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="interactive" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="7Vk-Hk-bIh">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="ComposeMessageSenderNameCell" id="vau-un-GOE" customClass="ComposeMessageSenderNameCell" customModule="ChatMessages" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="60.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="60.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vau-un-GOE" id="LmZ-Oh-clI">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="60.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="60.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter sender name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lWz-XO-1jt">
@@ -388,10 +388,10 @@
                                 </tableViewCellContentView>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="ComposeMessageSubjectCell" id="tln-8E-Jai" customClass="ComposeMessageSubjectCell" customModule="ChatMessages" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="88.5" width="414" height="60.5"/>
+                                <rect key="frame" x="0.0" y="60" width="600" height="60.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tln-8E-Jai" id="xUJ-IY-EkY">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="60.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="60.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="99U-kp-rUx">
@@ -423,10 +423,10 @@
                                 </tableViewCellContentView>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="ComposeMessageContentCell" rowHeight="219" id="kBg-ch-w9H" customClass="ComposeMessageContentCell" customModule="ChatMessages" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="149" width="414" height="219"/>
+                                <rect key="frame" x="0.0" y="219" width="600" height="219"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kBg-ch-w9H" id="Q48-GC-lbQ">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="219"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="219"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="rUr-4W-XSV">
@@ -506,7 +506,7 @@
             <objects>
                 <viewController id="Hgq-9O-9Ai" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aO4-OM-bit">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="Aa7-ac-2kl"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -522,7 +522,7 @@
             <objects>
                 <viewController id="MFp-Ah-XUF" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zRD-ab-CkH">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="Afz-ZT-Op6"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -534,23 +534,15 @@
             <point key="canvasLocation" x="-2171" y="1369"/>
         </scene>
     </scenes>
-    <designables>
-        <designable name="4xa-ol-VDc">
-            <size key="intrinsicContentSize" width="30" height="33"/>
-        </designable>
-        <designable name="Rwf-kc-xqk">
-            <size key="intrinsicContentSize" width="28" height="28"/>
-        </designable>
-    </designables>
     <color key="tintColor" name="DarkGrey"/>
     <resources>
         <image name="add" width="28" height="28"/>
         <image name="attachment" width="16" height="16"/>
-        <image name="bell" catalog="system" width="128" height="124"/>
-        <image name="calendar" catalog="system" width="128" height="106"/>
-        <image name="envelope" catalog="system" width="128" height="93"/>
-        <image name="info.circle" catalog="system" width="128" height="121"/>
-        <image name="paperplane.fill" catalog="system" width="128" height="118"/>
+        <image name="bell" catalog="system" width="32" height="32"/>
+        <image name="calendar" catalog="system" width="32" height="32"/>
+        <image name="envelope" catalog="system" width="32" height="32"/>
+        <image name="info.circle" catalog="system" width="32" height="32"/>
+        <image name="paperplane.fill" catalog="system" width="32" height="32"/>
         <namedColor name="BackgroundBottom">
             <color red="0.96470588235294119" green="0.96862745098039216" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
