@@ -18,7 +18,6 @@ struct Section {
     let titlePlular: String
 
     let type: SectionType
-
     var messages: [Message] = []
 
     var titleShown: String {

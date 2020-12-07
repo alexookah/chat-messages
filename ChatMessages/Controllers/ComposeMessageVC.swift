@@ -9,17 +9,25 @@ import UIKit
 
 class ComposeMessageVC: UITableViewController {
 
+    @IBOutlet weak var sendButton: UIBarButtonItem!
+
     var messagesViewModel: MessagesViewModel!
+
+    weak var messagesVCDelegate: MessagesVCDelegate?
 
     var newMessage: Message!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        newMessage = messagesViewModel.composeMessage()
+        newMessage = messagesViewModel.createNewMessage()
 
         // hide extra seperators
         tableView.tableFooterView = UIView()
+    }
+
+    @IBAction func didTapOnCancel(_ sender: UIBarButtonItem) {
+        self.dismiss(animated: true, completion: nil)
     }
 
     // MARK: - Table view data source
@@ -56,6 +64,9 @@ class ComposeMessageVC: UITableViewController {
             cell.cellDelegate = self
             cell.messageCellDelegate = self
 
+            // hide last seperator
+            cell.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: .greatestFiniteMagnitude)
+
             return cell
         default:
             return UITableViewCell()
@@ -63,17 +74,51 @@ class ComposeMessageVC: UITableViewController {
     }
 
     @IBAction func didTapOnSendMessage(_ sender: UIBarButtonItem) {
-        messagesViewModel.sections[0].messages.append(newMessage)
+
+        if newMessage.subject.isEmpty {
+            confirmSendMessage(checkType: "Subject")
+        } else if newMessage.content.isEmpty {
+            confirmSendMessage(checkType: "Content")
+        }
+    }
+
+    func confirmSendMessage(checkType: String) {
+        let alert = UIAlertController(title: "Empty \(checkType)",
+                                      message: "This message has no \(checkType). Do you want to send it anyway?",
+                                      preferredStyle: .alert)
+
+        let cancelButton = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alert.addAction(cancelButton)
+
+        let okAction = UIAlertAction(title: "Send", style: .default, handler: { _ in
+            self.sendMessage()
+        })
+        alert.addAction(okAction)
+
+        present(alert, animated: true)
+    }
+
+    func sendMessage() {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "HH:mm"
+        newMessage.time = formatter.string(from: Date())
+
+        messagesViewModel.addNewMessage(newMessage, type: .message)
+        messagesVCDelegate?.reloadData()
+        dismiss(animated: true, completion: nil)
     }
 
 }
 
 extension ComposeMessageVC: NewMessageCellDelegate {
+
     func updateNewMessage(with text: String, type: NewMessageTypeField) {
         switch type {
         case .senderName:
+            sendButton.isEnabled = !text.isEmpty
             newMessage.senderName = text
         case .subject:
+            title = text.isEmpty ? "New Message" : text
             newMessage.subject = text
         case .content:
             newMessage.content = text

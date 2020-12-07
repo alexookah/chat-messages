@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol MessagesVCDelegate: AnyObject {
+    func reloadData()
+}
+
 class MessagesVC: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
@@ -16,28 +20,27 @@ class MessagesVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        updateUnreadMessagesBadge()
+    }
+
+    func updateUnreadMessagesBadge() {
+        if let tabBarController = tabBarController {
+            var totalUnread = 0
+            messagesViewModel.sections.forEach({ section in
+                totalUnread += section.messages.filter({ $0.isUnread }).count
+            })
+            tabBarController.tabBar.items?[3].badgeValue = totalUnread > 0 ? totalUnread.description : nil
+        }
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let nvc = segue.destination as? UINavigationController,
            let composeMessageVC = nvc.viewControllers.first as? ComposeMessageVC {
             composeMessageVC.messagesViewModel = messagesViewModel
+            composeMessageVC.messagesVCDelegate = self
         }
     }
 
-}
-
-// MARK: UITableViewDelegate
-
-extension MessagesVC: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        guard let headerView = MessagesSectionView.instanceFromNib() else { return nil }
-
-        headerView.title.text = messagesViewModel.sections[section].titleShown
-
-        return headerView
-    }
 }
 
 // MARK: UITableViewDataSource
@@ -75,6 +78,29 @@ extension MessagesVC: UITableViewDataSource {
             cell.dropShadow(color: UIColor.appColor(.darkerGrey) ?? .black, opacity: 0.4,
                             offSet: CGSize(width: -1, height: 6), radius: 7, scale: true)
         }
+    }
+
+}
+
+// MARK: UITableViewDelegate
+
+extension MessagesVC: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        guard let headerView = MessagesSectionView.instanceFromNib() else { return nil }
+
+        headerView.title.text = messagesViewModel.sections[section].titleShown
+
+        return headerView
+    }
+}
+
+// MARK: MessagesVCDelegate
+
+extension MessagesVC: MessagesVCDelegate {
+
+    func reloadData() {
+        updateUnreadMessagesBadge()
+        tableView.reloadData()
     }
 
 }

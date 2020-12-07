@@ -34,8 +34,10 @@ class MessagesPreviewCell: UITableViewCell {
 
         messageStatusView.isHidden = !message.isUnread
         senderNameButton.setTitle(message.senderNameInitials, for: .normal)
-        messageSubject.text = message.subject
-        messageContent.text = message.content
+
+        // show empty string to keep the height cell same as others
+        messageSubject.text = message.subject.isEmpty ? " " : message.content
+        messageContent.text = message.content.isEmpty ? " " : message.content
 
         messageTime.text = message.time
         messageAttachment.isHidden = !message.containsAttachment

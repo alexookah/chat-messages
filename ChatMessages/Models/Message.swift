@@ -13,8 +13,8 @@ struct Message {
     var subject: String
     var content: String
 
-    let time: String
-    let attachment: URL?
+    var time: String
+    var attachment: URL?
 
     var containsAttachment: Bool {
         return attachment != nil

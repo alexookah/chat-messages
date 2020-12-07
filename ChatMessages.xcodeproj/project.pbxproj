@@ -18,6 +18,7 @@
 		B48F4D2A257D9D84007A47DF /* ComposeMessageSenderNameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48F4D29257D9D84007A47DF /* ComposeMessageSenderNameCell.swift */; };
 		B48F4D2D257D9DA5007A47DF /* ComposeMessageSubjectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48F4D2C257D9DA5007A47DF /* ComposeMessageSubjectCell.swift */; };
 		B48F4D30257D9DC1007A47DF /* ComposeMessageContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48F4D2F257D9DC1007A47DF /* ComposeMessageContentCell.swift */; };
+		B4C9D0EA257E92A700DF656B /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C9D0E9257E92A700DF656B /* MockData.swift */; };
 		B4D80901257CE29400B158AA /* MessagesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D80900257CE29400B158AA /* MessagesVC.swift */; };
 		B4D8090A257CE7EF00B158AA /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D80909257CE7EF00B158AA /* TabBarController.swift */; };
 		B4D80915257CFA7600B158AA /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D80914257CFA7600B158AA /* CustomView.swift */; };
@@ -42,6 +43,7 @@
 		B48F4D29257D9D84007A47DF /* ComposeMessageSenderNameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeMessageSenderNameCell.swift; sourceTree = "<group>"; };
 		B48F4D2C257D9DA5007A47DF /* ComposeMessageSubjectCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeMessageSubjectCell.swift; sourceTree = "<group>"; };
 		B48F4D2F257D9DC1007A47DF /* ComposeMessageContentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeMessageContentCell.swift; sourceTree = "<group>"; };
+		B4C9D0E9257E92A700DF656B /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
 		B4D80900257CE29400B158AA /* MessagesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesVC.swift; sourceTree = "<group>"; };
 		B4D80909257CE7EF00B158AA /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		B4D80914257CFA7600B158AA /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 			children = (
 				B4E7F396257B897D009FE7FC /* AppDelegate.swift */,
 				B4E7F398257B897D009FE7FC /* SceneDelegate.swift */,
+				B4C9D0E9257E92A700DF656B /* MockData.swift */,
 				B4D80908257CE7D000B158AA /* Helpers */,
 				B4E7F3B4257C2731009FE7FC /* Extensions */,
 				B4D808FD257CE22700B158AA /* Models */,
@@ -306,6 +309,7 @@
 				B48F4D0F257D8652007A47DF /* MessagesVIewModel.swift in Sources */,
 				B48F4CFF257D7437007A47DF /* UIColor.swift in Sources */,
 				B48F4D25257D9D31007A47DF /* ComposeMessageVC.swift in Sources */,
+				B4C9D0EA257E92A700DF656B /* MockData.swift in Sources */,
 				B48F4D1E257D8ADA007A47DF /* Section.swift in Sources */,
 				B477308D257D1932006251B8 /* Message.swift in Sources */,
 				B4D80901257CE29400B158AA /* MessagesVC.swift in Sources */,
