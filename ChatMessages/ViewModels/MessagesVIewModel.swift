@@ -12,57 +12,26 @@ class MessagesViewModel {
     var sections: [Section] = []
 
     init() {
-        createDemoReceipt()
-        createDemoMessages()
+        let demoReceiptSection = MockData.shared.createDemoReceipt()
+        addSection(section: demoReceiptSection)
+
+        let demoMessagesSection = MockData.shared.createDemoMessages()
+        addSection(section: demoMessagesSection)
     }
 
-    func createDemoReceipt() {
-
-        var sectionReceipt = Section(titleSingular: "Read receipt", titlePlular: "Read receipts", type: .receipt)
-
-        let messageReceipt = Message(senderName: "Alex Lykesas", subject: "Message Subject",
-                                     content: "Hello, Would youlike to...", time: "00:00",
-                                     attachment: nil, isUnread: true)
-        sectionReceipt.messages.append(messageReceipt)
-
-        addSection(section: sectionReceipt)
-    }
-
-    func createDemoMessages() {
-        var sectionMyMessages = Section(titleSingular: "My message", titlePlular: "My messages", type: .message)
-
-        let messageFirst = Message(senderName: "Alex Lykesas", subject: "Message Subject",
-                              content: "Hello, Would youlike to...", time: "00:00",
-                              attachment: nil, isUnread: true)
-        sectionMyMessages.messages.append(messageFirst)
-
-        let messageSecond = Message(senderName: "Alex Lykesas", subject: "Message Subject",
-                              content: "Hello, Would you like to...", time: "00:00",
-                              attachment: nil, isUnread: true)
-        sectionMyMessages.messages.append(messageSecond)
-
-        let messageThird = Message(senderName: "Alex Lykesas", subject: "Message Subject",
-                              content: "Hello, Would youlike to...", time: "00:00",
-                              attachment: nil, isUnread: true)
-        sectionMyMessages.messages.append(messageThird)
-
-        let messageFourth = Message(senderName: "Alex Lykesas", subject: "Message Subject",
-                              content: "Hello, Would youlike to...", time: "00:00",
-                              attachment: URL(string: "https://"), isUnread: false)
-        sectionMyMessages.messages.append(messageFourth)
-
-        addSection(section: sectionMyMessages)
-    }
-
-    func addSection(section: Section) {
+    private func addSection(section: Section) {
 
         if !section.messages.isEmpty {
             sections.append(section)
         }
     }
 
-    func composeMessage() -> Message {
+    func createNewMessage() -> Message {
         return Message(senderName: "", subject: "", content: "", time: "", attachment: nil, isUnread: true)
     }
 
+    func addNewMessage(_ message: Message, type: SectionType) {
+        guard let sectionIndexToAddMessage = sections.firstIndex(where: { $0.type == type }) else { return }
+        sections[sectionIndexToAddMessage].messages.append(message)
+    }
 }
