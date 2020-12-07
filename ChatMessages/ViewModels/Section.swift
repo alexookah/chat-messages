@@ -24,4 +24,6 @@ struct Section {
         messages.count == 1 ? titleSingular : titlePlular
     }
 
+    var emptySectionText: String
+
 }

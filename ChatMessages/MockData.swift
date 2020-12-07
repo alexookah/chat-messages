@@ -13,7 +13,8 @@ class MockData {
 
     func createDemoReceipt() -> Section {
 
-        var sectionReceipt = Section(titleSingular: "Read receipt", titlePlular: "Read receipts", type: .receipt)
+        var sectionReceipt = Section(titleSingular: "Read receipt", titlePlular: "Read receipts", type: .receipt,
+                                     emptySectionText: "No message receipts")
 
         let messageReceipt = Message(senderName: "Alex Lykesas", subject: "Message Subject",
                                      content: "Hello, Would youlike to...", time: "00:00",
@@ -24,7 +25,8 @@ class MockData {
     }
 
     func createDemoMessages() -> Section {
-        var sectionMyMessages = Section(titleSingular: "My message", titlePlular: "My messages", type: .message)
+        var sectionMyMessages = Section(titleSingular: "My message", titlePlular: "My messages", type: .message,
+                                        emptySectionText: "No messages")
 
         let messageFirst = Message(senderName: "Alex Lykesas", subject: "Message Subject",
                               content: "Hello, Would youlike to...", time: "00:00",

@@ -24,5 +24,5 @@ struct Message {
         return senderName.split(separator: " ").compactMap({ String($0.first ?? Character("")) }).joined()
     }
 
-    let isUnread: Bool
+    var isUnread: Bool
 }

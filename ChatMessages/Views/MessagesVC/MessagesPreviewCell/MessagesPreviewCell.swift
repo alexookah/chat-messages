@@ -9,7 +9,7 @@ import UIKit
 
 class MessagesPreviewCell: UITableViewCell {
 
-    static let reuseIdentifier: String = "MessagesPreviewCell"
+    static let reuseIdentifier = "MessagesPreviewCell"
 
     @IBOutlet weak var messageStatusView: CustomView!
     @IBOutlet weak var senderNameButton: CustomButton!

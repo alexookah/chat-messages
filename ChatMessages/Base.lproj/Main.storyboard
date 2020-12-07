@@ -132,7 +132,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="yS9-X0-pDe">
-                                                <rect key="frame" x="0.0" y="0.0" width="591" height="44"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="231" height="44"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AhF-ex-PEs">
                                                         <rect key="frame" x="0.0" y="0.0" width="72" height="44"/>
@@ -153,30 +153,6 @@
                                                         <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                         <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="8" maxY="0.0"/>
                                                         <state key="normal" title="Sent"/>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Jt-QS-cbk">
-                                                        <rect key="frame" x="239" y="0.0" width="82" height="44"/>
-                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                                        <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="8" maxY="0.0"/>
-                                                        <state key="normal" title="Button"/>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Hk-1r-TAF">
-                                                        <rect key="frame" x="329" y="0.0" width="82" height="44"/>
-                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                                        <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="8" maxY="0.0"/>
-                                                        <state key="normal" title="Button"/>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SNN-ib-r8O">
-                                                        <rect key="frame" x="419" y="0.0" width="82" height="44"/>
-                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                                        <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="8" maxY="0.0"/>
-                                                        <state key="normal" title="Button"/>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qhS-I7-NH3">
-                                                        <rect key="frame" x="509" y="0.0" width="82" height="44"/>
-                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                                        <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="8" maxY="0.0"/>
-                                                        <state key="normal" title="Button"/>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -301,6 +277,32 @@
                                             <outlet property="messageTime" destination="ggF-Ov-4Xw" id="uC1-Wx-xaj"/>
                                             <outlet property="senderFullName" destination="Lbg-OO-i4t" id="SX6-Nc-twT"/>
                                             <outlet property="senderNameButton" destination="4xa-ol-VDc" id="UKE-iB-Leu"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MessagesEmptySectionCell" id="K7U-2i-gyN" customClass="MessagesEmptySectionCell" customModule="ChatMessages" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="159.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="K7U-2i-gyN" id="tKG-Ra-Rp4">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="There aren't any messages" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uGO-nJ-0Wt">
+                                                    <rect key="frame" x="114.5" y="13" width="185" height="18"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="tintColor" name="DarkGrey"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" name="DarkGrey"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="uGO-nJ-0Wt" firstAttribute="centerX" secondItem="tKG-Ra-Rp4" secondAttribute="centerX" id="19N-bO-Xt1"/>
+                                                <constraint firstItem="uGO-nJ-0Wt" firstAttribute="centerY" secondItem="tKG-Ra-Rp4" secondAttribute="centerY" id="WJd-dK-5Pn"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="title" destination="uGO-nJ-0Wt" id="eW3-PZ-s7K"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

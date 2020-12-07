@@ -13,17 +13,10 @@ class MessagesViewModel {
 
     init() {
         let demoReceiptSection = MockData.shared.createDemoReceipt()
-        addSection(section: demoReceiptSection)
+        sections.append(demoReceiptSection)
 
         let demoMessagesSection = MockData.shared.createDemoMessages()
-        addSection(section: demoMessagesSection)
-    }
-
-    private func addSection(section: Section) {
-
-        if !section.messages.isEmpty {
-            sections.append(section)
-        }
+        sections.append(demoMessagesSection)
     }
 
     func createNewMessage() -> Message {

@@ -79,6 +79,8 @@ class ComposeMessageVC: UITableViewController {
             confirmSendMessage(checkType: "Subject")
         } else if newMessage.content.isEmpty {
             confirmSendMessage(checkType: "Content")
+        } else {
+            sendMessage()
         }
     }
 

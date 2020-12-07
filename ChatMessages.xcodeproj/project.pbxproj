@@ -22,6 +22,7 @@
 		B4D80901257CE29400B158AA /* MessagesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D80900257CE29400B158AA /* MessagesVC.swift */; };
 		B4D8090A257CE7EF00B158AA /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D80909257CE7EF00B158AA /* TabBarController.swift */; };
 		B4D80915257CFA7600B158AA /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D80914257CFA7600B158AA /* CustomView.swift */; };
+		B4DFDB63257ECE4300AAF5FC /* MessagesEmptySectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DFDB62257ECE4300AAF5FC /* MessagesEmptySectionCell.swift */; };
 		B4E7F397257B897D009FE7FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E7F396257B897D009FE7FC /* AppDelegate.swift */; };
 		B4E7F399257B897D009FE7FC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E7F398257B897D009FE7FC /* SceneDelegate.swift */; };
 		B4E7F39E257B897D009FE7FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4E7F39C257B897D009FE7FC /* Main.storyboard */; };
@@ -47,6 +48,7 @@
 		B4D80900257CE29400B158AA /* MessagesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesVC.swift; sourceTree = "<group>"; };
 		B4D80909257CE7EF00B158AA /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		B4D80914257CFA7600B158AA /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
+		B4DFDB62257ECE4300AAF5FC /* MessagesEmptySectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesEmptySectionCell.swift; sourceTree = "<group>"; };
 		B4E7F393257B897D009FE7FC /* ChatMessages.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatMessages.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4E7F396257B897D009FE7FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B4E7F398257B897D009FE7FC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				B4773083257D0D83006251B8 /* MessagesPreviewCell.swift */,
+				B4DFDB62257ECE4300AAF5FC /* MessagesEmptySectionCell.swift */,
 			);
 			path = MessagesPreviewCell;
 			sourceTree = "<group>";
@@ -300,6 +303,7 @@
 				B4E7F3C0257C2CD3009FE7FC /* MessagesSectionView.swift in Sources */,
 				B48F4D2A257D9D84007A47DF /* ComposeMessageSenderNameCell.swift in Sources */,
 				B4E7F397257B897D009FE7FC /* AppDelegate.swift in Sources */,
+				B4DFDB63257ECE4300AAF5FC /* MessagesEmptySectionCell.swift in Sources */,
 				B48F4D02257D7B3E007A47DF /* UIView.swift in Sources */,
 				B48F4D2D257D9DA5007A47DF /* ComposeMessageSubjectCell.swift in Sources */,
 				B48F4D30257D9DC1007A47DF /* ComposeMessageContentCell.swift in Sources */,
