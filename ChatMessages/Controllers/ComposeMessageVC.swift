@@ -107,6 +107,7 @@ class ComposeMessageVC: UITableViewController {
 
         messagesViewModel.addNewMessage(newMessage, type: .message)
         messagesVCDelegate?.reloadData()
+        view.endEditing(true)
         dismiss(animated: true, completion: nil)
     }
 
