@@ -65,11 +65,11 @@
             </objects>
             <point key="canvasLocation" x="-1178" y="537"/>
         </scene>
-        <!--Mail Messages-->
+        <!--Messages-->
         <scene sceneID="EGA-qU-AuZ">
             <objects>
                 <navigationController navigationBarHidden="YES" id="VRs-0t-pvO" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Mail Messages" image="envelope" catalog="system" badgeValue="4" id="aJJ-CV-23S"/>
+                    <tabBarItem key="tabBarItem" title="Messages" image="envelope" catalog="system" badgeValue="4" id="aJJ-CV-23S"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="uiK-N4-cZ4">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -92,8 +92,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jD6-XT-b7r">
                                 <rect key="frame" x="0.0" y="44" width="414" height="70"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mail Messages" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xj2-6s-LpX">
-                                        <rect key="frame" x="20" y="17" width="198" height="36"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Messages" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xj2-6s-LpX">
+                                        <rect key="frame" x="20" y="17" width="136.5" height="36"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
                                         <color key="textColor" systemColor="systemGrayColor"/>
                                         <nil key="highlightedColor"/>
