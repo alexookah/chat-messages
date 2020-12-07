@@ -17,7 +17,7 @@ class MockData {
                                      emptySectionText: "No message receipts")
 
         let messageReceipt = Message(senderName: "Alex Lykesas", subject: "Message Subject",
-                                     content: "Hello, Would youlike to...", time: "00:00",
+                                     content: "Hello, Would you like to...", time: "00:00",
                                      attachment: nil, isUnread: true)
         sectionReceipt.messages.append(messageReceipt)
 
@@ -29,7 +29,7 @@ class MockData {
                                         emptySectionText: "No messages")
 
         let messageFirst = Message(senderName: "Alex Lykesas", subject: "Message Subject",
-                              content: "Hello, Would youlike to...", time: "00:00",
+                              content: "Hello, Would youl ike to...", time: "00:00",
                               attachment: nil, isUnread: true)
         sectionMyMessages.messages.append(messageFirst)
 
@@ -44,7 +44,7 @@ class MockData {
         sectionMyMessages.messages.append(messageThird)
 
         let messageFourth = Message(senderName: "Alex Lykesas", subject: "Message Subject",
-                              content: "Hello, Would youlike to...", time: "00:00",
+                              content: "Hello, Would youl ike to...", time: "00:00",
                               attachment: URL(string: "https://demo_attachment.com/link.pdf"), isUnread: false)
         sectionMyMessages.messages.append(messageFourth)
 
