@@ -9,9 +9,9 @@ import Foundation
 
 struct Message {
 
-    let senderName: String
-    let subject: String
-    let content: String
+    var senderName: String
+    var subject: String
+    var content: String
 
     let time: String
     let attachment: URL?

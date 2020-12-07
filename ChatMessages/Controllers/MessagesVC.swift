@@ -19,6 +19,13 @@ class MessagesVC: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let nvc = segue.destination as? UINavigationController,
+           let composeMessageVC = nvc.viewControllers.first as? ComposeMessageVC {
+            composeMessageVC.messagesViewModel = messagesViewModel
+        }
+    }
+
 }
 
 // MARK: UITableViewDelegate

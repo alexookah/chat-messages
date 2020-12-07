@@ -14,6 +14,10 @@
 		B48F4D02257D7B3E007A47DF /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48F4D01257D7B3E007A47DF /* UIView.swift */; };
 		B48F4D0F257D8652007A47DF /* MessagesVIewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48F4D0E257D8652007A47DF /* MessagesVIewModel.swift */; };
 		B48F4D1E257D8ADA007A47DF /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48F4D1D257D8ADA007A47DF /* Section.swift */; };
+		B48F4D25257D9D31007A47DF /* ComposeMessageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48F4D24257D9D31007A47DF /* ComposeMessageVC.swift */; };
+		B48F4D2A257D9D84007A47DF /* ComposeMessageSenderNameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48F4D29257D9D84007A47DF /* ComposeMessageSenderNameCell.swift */; };
+		B48F4D2D257D9DA5007A47DF /* ComposeMessageSubjectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48F4D2C257D9DA5007A47DF /* ComposeMessageSubjectCell.swift */; };
+		B48F4D30257D9DC1007A47DF /* ComposeMessageContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48F4D2F257D9DC1007A47DF /* ComposeMessageContentCell.swift */; };
 		B4D80901257CE29400B158AA /* MessagesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D80900257CE29400B158AA /* MessagesVC.swift */; };
 		B4D8090A257CE7EF00B158AA /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D80909257CE7EF00B158AA /* TabBarController.swift */; };
 		B4D80915257CFA7600B158AA /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D80914257CFA7600B158AA /* CustomView.swift */; };
@@ -34,6 +38,10 @@
 		B48F4D01257D7B3E007A47DF /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		B48F4D0E257D8652007A47DF /* MessagesVIewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesVIewModel.swift; sourceTree = "<group>"; };
 		B48F4D1D257D8ADA007A47DF /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
+		B48F4D24257D9D31007A47DF /* ComposeMessageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeMessageVC.swift; sourceTree = "<group>"; };
+		B48F4D29257D9D84007A47DF /* ComposeMessageSenderNameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeMessageSenderNameCell.swift; sourceTree = "<group>"; };
+		B48F4D2C257D9DA5007A47DF /* ComposeMessageSubjectCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeMessageSubjectCell.swift; sourceTree = "<group>"; };
+		B48F4D2F257D9DC1007A47DF /* ComposeMessageContentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeMessageContentCell.swift; sourceTree = "<group>"; };
 		B4D80900257CE29400B158AA /* MessagesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesVC.swift; sourceTree = "<group>"; };
 		B4D80909257CE7EF00B158AA /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		B4D80914257CFA7600B158AA /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
@@ -85,6 +93,16 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
+		B48F4D27257D9D47007A47DF /* ComposeMessageVC */ = {
+			isa = PBXGroup;
+			children = (
+				B48F4D29257D9D84007A47DF /* ComposeMessageSenderNameCell.swift */,
+				B48F4D2C257D9DA5007A47DF /* ComposeMessageSubjectCell.swift */,
+				B48F4D2F257D9DC1007A47DF /* ComposeMessageContentCell.swift */,
+			);
+			path = ComposeMessageVC;
+			sourceTree = "<group>";
+		};
 		B4D808FD257CE22700B158AA /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				B4D80900257CE29400B158AA /* MessagesVC.swift */,
+				B48F4D24257D9D31007A47DF /* ComposeMessageVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -176,6 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				B4D80910257CF29400B158AA /* MessagesVC */,
+				B48F4D27257D9D47007A47DF /* ComposeMessageVC */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -275,13 +295,17 @@
 			files = (
 				B4D80915257CFA7600B158AA /* CustomView.swift in Sources */,
 				B4E7F3C0257C2CD3009FE7FC /* MessagesSectionView.swift in Sources */,
+				B48F4D2A257D9D84007A47DF /* ComposeMessageSenderNameCell.swift in Sources */,
 				B4E7F397257B897D009FE7FC /* AppDelegate.swift in Sources */,
 				B48F4D02257D7B3E007A47DF /* UIView.swift in Sources */,
+				B48F4D2D257D9DA5007A47DF /* ComposeMessageSubjectCell.swift in Sources */,
+				B48F4D30257D9DC1007A47DF /* ComposeMessageContentCell.swift in Sources */,
 				B4E7F399257B897D009FE7FC /* SceneDelegate.swift in Sources */,
 				B4D8090A257CE7EF00B158AA /* TabBarController.swift in Sources */,
 				B4773084257D0D83006251B8 /* MessagesPreviewCell.swift in Sources */,
 				B48F4D0F257D8652007A47DF /* MessagesVIewModel.swift in Sources */,
 				B48F4CFF257D7437007A47DF /* UIColor.swift in Sources */,
+				B48F4D25257D9D31007A47DF /* ComposeMessageVC.swift in Sources */,
 				B48F4D1E257D8ADA007A47DF /* Section.swift in Sources */,
 				B477308D257D1932006251B8 /* Message.swift in Sources */,
 				B4D80901257CE29400B158AA /* MessagesVC.swift in Sources */,

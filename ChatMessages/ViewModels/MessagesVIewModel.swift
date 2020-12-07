@@ -61,4 +61,8 @@ class MessagesViewModel {
         }
     }
 
+    func composeMessage() -> Message {
+        return Message(senderName: "", subject: "", content: "", time: "", attachment: nil, isUnread: true)
+    }
+
 }
