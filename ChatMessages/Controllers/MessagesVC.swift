@@ -148,23 +148,25 @@ extension MessagesVC {
         if messagesViewModel.sections[indexPath.section].messages.isEmpty {
             return nil
         }
+        let isUnread = messagesViewModel.sections[indexPath.section].messages[indexPath.row].isUnread
+
         return UISwipeActionsConfiguration(actions: [
-            makeReadContextualAction(forRowAt: indexPath)
+            makeReadContextualAction(forRowAt: indexPath, isUnread: isUnread)
         ])
     }
 
     // MARK: - Contextual READ Actions
-    private func makeReadContextualAction(forRowAt indexPath: IndexPath) -> UIContextualAction {
-        return UIContextualAction(style: .normal, title: "Read") { (_, _, completion) in
+    private func makeReadContextualAction(forRowAt indexPath: IndexPath, isUnread: Bool) -> UIContextualAction {
+        return UIContextualAction(style: .normal, title: isUnread ? "Read" : "Unread") { (_, _, completion) in
 
-            self.markMessagesAsRead(indexPath: indexPath)
+            self.markMessagesAsRead(indexPath: indexPath, isUnread: isUnread)
             completion(true)
         }
     }
 
-    private func markMessagesAsRead(indexPath: IndexPath) {
+    private func markMessagesAsRead(indexPath: IndexPath, isUnread: Bool) {
 
-        messagesViewModel.sections[indexPath.section].messages[indexPath.row].isUnread = false
+        messagesViewModel.sections[indexPath.section].messages[indexPath.row].isUnread = !isUnread
 
         let message = messagesViewModel.sections[indexPath.section].messages[indexPath.row]
 
