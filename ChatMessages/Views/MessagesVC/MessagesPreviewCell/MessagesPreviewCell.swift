@@ -36,7 +36,7 @@ class MessagesPreviewCell: UITableViewCell {
         senderNameButton.setTitle(message.senderNameInitials, for: .normal)
 
         // show empty string to keep the height cell same as others
-        messageSubject.text = message.subject.isEmpty ? " " : message.content
+        messageSubject.text = message.subject.isEmpty ? " " : message.subject
         messageContent.text = message.content.isEmpty ? " " : message.content
 
         messageTime.text = message.time
